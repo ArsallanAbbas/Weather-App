@@ -10,19 +10,22 @@
 <body>
     <header>
         <nav>
-            <div>
+            <form id="form">
                 <input id="search-input" type="text" placeholder="Search by city name or zip-code"/>
-            </div>
+            </form>
         </nav>
     </header>
     <section>
+        <div>
+            <p id="error"></p>
+        </div>
         <div class="container">
             <p><img id="icon" src="" alt="weather-icon"></p>
             <p>Location: <span id="city"></span></p>
             <p>Weather condition: <span id="conditions"></span></p>
-            <p>Temprature: <span id="temprature"></span></p>
-            <p>Humidity: <span id="humidity"></span></p>
-            <p>Wind Speed: <span id="wind-speed"></span></p>
+            <p>Temprature: <span id="temprature"></span>&nbsp;&deg;C</p>
+            <p>Humidity: <span id="humidity"></span>&nbsp;%</p>
+            <p>Wind Speed: <span id="wind-speed"></span>&nbsp;meter/sec</p>
         </div>
     </section>
 </body>
