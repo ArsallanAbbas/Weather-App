@@ -13,7 +13,7 @@ export function fetchCoordinates(event) {
                 console.log(res);
                 return res.json();
                 } else {
-                    throw new Error("Wrong zip code")
+                    throw new Error("Invalid Zip/Potal code. Please enter Zip/post code and country code divided by comma")
                 }
             })
             .then(data => {
@@ -30,7 +30,7 @@ export function fetchCoordinates(event) {
             .then(data => {
                 console.log(data)
                 if (data.length === 0) {
-                    throw new Error("City name incorrect")
+                    throw new Error("Invalid city name. Please enter correct city name")
                 } else {
                     fetchWeather(data[0].lat, data[0].lon);
                 }

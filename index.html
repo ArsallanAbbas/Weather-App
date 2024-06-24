@@ -5,28 +5,64 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather App</title>
     <script src="Js/script.js" type="module"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="Styles/main.css">
+    <link rel="stylesheet" href="Styles/header.css">
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap');
+    </style>
 </head>
 <body>
     <header>
         <nav>
-            <form id="form">
-                <input id="search-input" type="text" placeholder="Search by city name or zip-code"/>
+            <form id="form" autocomplete="off">
+                <input class="search-input" id="search-input" type="text" placeholder="Search by city name or zip-code"/>
             </form>
         </nav>
     </header>
-    <section>
-        <div>
+    <main>
+        <div class="error">
             <p id="error"></p>
         </div>
         <div class="container">
-            <p><img id="icon" src="" alt="weather-icon"></p>
-            <p>Location: <span id="city"></span></p>
-            <p>Weather condition: <span id="conditions"></span></p>
-            <p>Temprature: <span id="temprature"></span>&nbsp;&deg;C</p>
-            <p>Humidity: <span id="humidity"></span>&nbsp;%</p>
-            <p>Wind Speed: <span id="wind-speed"></span>&nbsp;meter/sec</p>
+            <p class="city" id="city"></p>
+            <div class="main-flex">
+                <p><img class="icon" id="icon" src="" alt="weather-icon"></p>
+                <div class="main-right">
+                    <p class="temprature"><span id="temprature"></span>&deg;</p>
+                    <p class="conditions" id="conditions"></p>
+                </div>
+            </div>
+            <div class="line"></div>
+            <div class="bottom-flex">
+                <div class="bottom-flex-item">
+                    <p><span id="humidity"></span>&nbsp;%</p>
+                    <p>Humidity</p>
+                </div>
+                <div class="bottom-flex-item">
+                    <p><span id="wind-speed"></span>&nbsp;m/s</p>
+                    <p>Wind</p>
+                </div>
+                <div class="bottom-flex-item">
+                    <p><span id="visibility"></span>&nbsp;km</p>
+                    <p>Visibility</p>
+                </div>
+            </div>
+            <div class="line"></div>
+            <div class="bottom-flex">
+                <div class="bottom-flex-item">
+                    <p><span id="low"></span>&deg;</p>
+                    <p>Low</p>
+                </div>
+                <div class="bottom-flex-item">
+                    <p><span id="high"></span>&deg;</p>
+                    <p>High</p>
+                </div>
+                <div class="bottom-flex-item">
+                    <p><span id="feels-like"></span>&deg;</p>
+                    <p>Feels-like</p>
+                </div>
+            </div>
         </div>
-    </section>
+    </main>
 </body>
 </html>
