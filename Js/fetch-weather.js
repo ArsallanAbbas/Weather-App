@@ -9,7 +9,6 @@ export function fetchWeather(coord1, coord2) {
         fetch(url)
             .then(res => res.json())
             .then(data => {
-                console.log(data)
                 localStorage.setItem(url, JSON.stringify(data));
                 populateDom(data);
             })

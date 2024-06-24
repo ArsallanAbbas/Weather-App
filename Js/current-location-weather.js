@@ -1,4 +1,3 @@
-import {populateDom} from "./dom-manipulation.js";
 import { fetchWeather } from "./fetch-weather.js";
 
 export function currentLocationWeather() {
