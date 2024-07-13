@@ -5,7 +5,7 @@ export function fetchCoordinates(event) {
     document.getElementById("error").innerText = "";
     let input = document.getElementById("search-input").value;
     if (/[0-9]/.test(input)) {
-        let url = `https://api.openweathermap.org/geo/1.0/zip?zip=${input}&appid=74e6f02cdc206d1d0ad92f6b1ee4bbcd`;
+        let url = `https://api.openweathermap.org/geo/1.0/zip?zip=${input}&appid=d4e52272c6bbf5c3a1e43ec4589220c4`;
         fetch(url)
             .then(res => {
                 if (res.ok) {
@@ -21,7 +21,7 @@ export function fetchCoordinates(event) {
                 document.getElementById("error").innerText = err;
             })
     } else {
-        let url = `https://api.openweathermap.org/geo/1.0/direct?q=${input}&limit=1&appid=74e6f02cdc206d1d0ad92f6b1ee4bbcd`;
+        let url = `https://api.openweathermap.org/geo/1.0/direct?q=${input}&limit=1&appid=d4e52272c6bbf5c3a1e43ec4589220c4`;
         fetch(url)
             .then(res => res.json())
             .then(data => {
